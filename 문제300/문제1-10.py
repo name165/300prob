@@ -311,5 +311,160 @@ print(results)
 #100
 data = ['09/05', '09/06', '09/07', '09/08', '09/09']
 close_price = [10500, 10300, 10100, 10800, 11000]
-close_table = dict(zip(data,close_price))
+close_table = dict(zip(data, close_price))
 print(close_table)
+#101
+#Bool
+#102
+#False
+#103
+#True
+#104
+#True
+#105
+#True
+#106
+#비교에서 =>,=<는 사용불가
+#107
+#없음
+#108
+#Hi, there.
+#109
+#1 2 4
+#110
+#3 5
+#111
+a=input()
+print(a*2)
+#112
+a=int(input())
+print(a+10)
+#113
+a=int(input())
+if a%2==0:
+    print("짝수")
+else:print("홀수")
+#114
+a=int(input())
+a+=20
+if a>255:
+    a=255
+print(a)
+#115
+a=int(input())
+a-=20
+if a<0:
+    a=0
+print(a)
+#116
+a=input()
+if(a.split(":")[1] == "00"):print("정각입니다")
+else:print("정각이 아닙니다")
+#117
+fruit = ["사과", "포도", "홍시"]
+a=input("좋아하는 과일은? ")
+if a in fruit:print("정답입니다")
+#118
+warn_investment_list = ["Microsoft", "Google", "Naver", "Kakao", "SAMSUNG", "LG"]
+a=input()
+if a in warn_investment_list:print("투자 경고 종목입니다")
+else:print("투자 경고 종목이 아닙니다")
+#119
+fruit = {"봄":"딸기", "여름":"토마토", "가을": "사과"}
+a = input("제가좋아하는계절은: ")
+if a in fruit.keys():print("정답입니다")
+else : print("오답입니다")
+#120
+fruit = {"봄":"딸기", "여름":"토마토", "가을": "사과"}
+a = input("좋아하는과일은? ")
+if a in fruit.values():print("정답입니다")
+else : print("오답입니다")
+#121
+a=input()
+if a.islower():a = a.upper()
+if a.isupper():a = a.lower()
+print(a)
+#122
+score = int(input("score:"))
+print("grade is")
+if score<100 and score>80:print("A")
+elif score>60:print("B")
+elif score>40:print("C")
+elif score>20:print("D")
+elif score>0:print("E")
+#123
+money = input()
+money = money.split(" ")
+money[0] = int(money[0])
+if money[1] == "달러": money[0] *= 1167
+if money[1] == "위안": money[0] *= 1.096
+if money[1] == "유로": money[0] *= 1268
+if money[1] == "위안": money[0] *= 171
+print(money[0], "원")
+#124
+n1 = input("input number1")
+n2 = input("input number2")
+n3 = input("input number3")
+print(max([n1, n2, n3]))
+
+#125
+num=input().split("-")
+if num[0] == "011":
+    print("당신은 SKT 사용자입니다")
+if num[0] == "016":
+    print("당신은 KT 사용자입니다")
+if num[0] == "019":
+    print("당신은 LGU 사용자입니다")
+if num[0] == "010":
+    print("당신은 알수없는 사용자입니다")
+
+#126
+num = input("우편번호: ")
+if num[2] in ["0", "1", "2"]:
+    print("강북구")
+elif num[2] in ["3", "4", "5"]:
+    print("도봉구")
+elif num[2] in ["6", "7", "8", "9"]:
+     print("노원구")
+
+#127
+num= input("주민등록번호:")
+back= num.split("-")[1]
+if back[0] in ["1", "3"]:
+    print("남자")
+elif back[0] in ["0", "2"]:
+    print("여자")
+
+#128
+num= input("주민등록번호:")
+back= num.split("-")[1][1:3]
+if 0 <= int(back) and int(back) <= 8:
+    print("서울입니다")
+else:
+    print("서울이 아닙니다")
+
+#129
+num= input("주민등록번호:").split("-")
+num1=num[0]+num[1][0:6]
+al = 0
+i = 0
+while True:
+    if i>=8:
+        break
+    al += int(num1[i]) * (i+2)
+    i+=1
+for i in range(4):
+    al += int(num1[i+8]) * (i+2)
+if (11 - al%11) == int(num[1][6]):
+    print("유효한 주민등록번호 입니다")
+if (11 - al%11) != int(num[1][6]):
+    print("유효하지 않은 주민등록번호 입니다")
+
+#130
+import requests
+btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
+change = int(btc["max_price"]) - int(btc["min_price"])
+if int(btc["opening_price"]) + change > int(btc["max_price"]):
+    print("상승장")
+else:
+    print("하락장")
