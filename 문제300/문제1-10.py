@@ -212,3 +212,104 @@ print(interest)
 data = [2, 4, 3, 1, 5, 10, 9]
 data.sort()
 print(data)
+#문제71
+my_variable = ()
+#문제72
+movie_rank = ("닥터 스트레인지", "스플릿", "럭키")
+#문제73
+tup = (1)
+#문제74
+#t = (1, 2, 3)
+#t[0] = 'a'
+#문제75
+t= 1, 2, 3, 4
+#int
+#문제76
+t = ('a', 'b', 'c')
+t = ('A', "b", "c")
+print(t)
+#문제77
+interest = ("삼성전자", "LG전자", "SK Hynix")
+interest = list(interest)
+print(interest)
+#문제78
+interest =["삼성전자", "LG전자", "SK Hynix"]
+interest = tuple(interest)
+print(interest)
+#문제79
+temp = ('apple', 'banana', 'cake')
+a, b, c = temp
+print(a, b, c)
+#문제80
+t = [i for i in range(2, 99, 2)]
+t = tuple(t)
+print(t)
+#문제81
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+*valid_score, a, b = scores
+print(valid_score)
+#문제82
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+a, b, *valid_score = scores
+print(valid_score)
+#문제83
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+a, *valid_score, b  = scores
+print(valid_score)
+#문제84
+temp = {}
+#문제85
+ice = {"메로나": 1000, "폴라포": 1200, "빵빠레": 1800}
+print(ice)
+#문제86
+ice['죠스바'] = 1200
+ice['월드콘'] = 1500
+print(ice)
+#문제87
+print("메로나 가격:", ice["메로나"])
+print(ice)
+#문제88
+ice["메로나"] = 1300
+print(ice)
+#문제89
+del(ice["메로나"])
+print(ice)
+#90
+#누가바라는 key값에 대응되는 value값이 없음
+#91
+inventory = {"메로나": [300, 20], "비비빅": [400, 3], "죠스바": [250, 100]}
+print(inventory)
+#92
+print(inventory["메로나"][0], "원")
+#93
+print(inventory["메로나"][1], "개")
+#94
+inventory['월드콘'] = [500, 7]
+print(inventory)
+#95
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+lis = list(icecream.keys())
+print(lis)
+#96
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+lis = list(icecream.values())
+print(lis)
+#97
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+lis = list(icecream.values())
+print(sum(lis))
+#98
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+new_product = {"팥빙수": 2700, "아맛나": 1000}
+icecream.update(new_product)
+print(icecream)
+#99
+keys = ("apple", "pear", "peach")
+vals = (300, 250, 400)
+results = dict(zip(keys, vals))
+print(results)
+#100
+data = ['09/05', '09/06', '09/07', '09/08', '09/09']
+close_price = [10500, 10300, 10100, 10800, 11000]
+close_table = dict(zip(data,close_price))
+print(close_table)
