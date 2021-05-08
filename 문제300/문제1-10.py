@@ -460,11 +460,4 @@ if (11 - al%11) == int(num[1][6]):
 if (11 - al%11) != int(num[1][6]):
     print("유효하지 않은 주민등록번호 입니다")
 
-#130
-import requests
-btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
-change = int(btc["max_price"]) - int(btc["min_price"])
-if int(btc["opening_price"]) + change > int(btc["max_price"]):
-    print("상승장")
-else:
-    print("하락장")
+    
