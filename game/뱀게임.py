@@ -6,13 +6,14 @@ import random # 랜덤 파일 임포트
 import sys # 시스템 파일 임포트
 
 #2. 게임 설정
+score = 0
 pygame.init()
 screen = pygame.display.set_mode((1000, 1000))
 frame = pygame.time.Clock()
 
 food = [] #음식 위치 저장
 snake = [] #뱀 꼬리 위치 저장
-(width, height) = (50, 50) # 가로 x 세로
+(width, height) = (33, 35) # 가로 x 세로
 
 #3.함수 만들기
 #3-1. 음식 생성
@@ -26,7 +27,7 @@ def food_create():
 #3-2. 음식 이동
 def food_move(pos):
     i = food.index(pos)
-    del(food[i])
+    del food[i]
     food_create()
 #3-3. 음식 그리기
 def draw(message):
@@ -45,6 +46,8 @@ def draw(message):
 
 #4.게임 실행
 
+background = pygame.image.load("background.png")
+
 myfont = pygame.font.SysFont(None, 80)
 key = K_DOWN
 message = None
@@ -54,6 +57,7 @@ for i in range(10):
     food_create()
 
 while True:
+    score = len(snake) - 1
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
@@ -79,4 +83,4 @@ while True:
             snake.pop()
 
     draw(message)
-    frame.tick(5)
+    frame.tick(score//10*5 + 5)
