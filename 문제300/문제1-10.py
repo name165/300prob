@@ -460,4 +460,450 @@ if (11 - al%11) == int(num[1][6]):
 if (11 - al%11) != int(num[1][6]):
     print("유효하지 않은 주민등록번호 입니다")
 
+#130
+import requests
+btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
+fluc = int(btc["max_price"])-int(btc["min_price"])
+if int(btc["opening_price"])+fluc > int(btc["max_price"]):
+    print("상승장")
+else:
+    print("하락장")
+
+#131
+'''
+사과
+귤
+수박
+'''
+#132
+'''
+#####
+#####
+#####
+'''
+#133
+list = ["A", "B", "C"]
+for a in range(3):
+    print(list[a])
+print("-----------")
+
+#134
+list = ["A", "B", "C"]
+for a in range(3):
+    print("출력:",list[a])
+print("-----------")
+
+#135
+list = ["A", "B", "C"]
+for a in range(3):
+    print("변환:", list[a].lower())
+print("-----------")
+
+#136
+for i in [10, 20, 30]:
+    print(i)
+print("-----------")
+
+#137
+for i in range(10,31,10):
+    print(i)
+print("-----------")
+
+#138
+for i in range(10,31,10):
+    print(i)
+    print("------")
+print("-----------")
+
+#139
+print("++++")
+for i in range(10,31,10):
+    print(i)
+print("-----------")
+
+#140
+for i in range(4):
+    print("-------")
+
+#141
+list = [100, 200, 300]
+for i in list:
+    print(i + 10)
+print("-----------")
+
+#142
+list = ["김밥", "라면", "튀김"]
+for i in list:
+    print("오늘의 메뉴: ", i)
+print("-----------")
+
+#143
+list = ["SK하이닉스", "삼성전자", "LG전자"]
+for i in list:
+    print(len(i))
+print("-----------")
+
+#144
+list = ["dog", "cat", "parrot"]
+for i in list:
+    print(i,len(i))
+print("-----------")
+
+#145
+list = ["dog", "cat", "parrot"]
+for i in list:
+    print(i[0])
+print("-----------")
+
+#146
+list = [1,2,3]
+for i in list:
+    print("3 x",i)
+print("-----------")
+
+#147
+list = [1,2,3]
+for i in list:
+    print("3 x",i,"=",i*3)
+print("-----------")
+
+#148
+list = ['가', '나', '다', '라']
+for i in list[::2]:
+    print(i)
+print("-----------")
+
+#149
+list = ['가', '나', '다', '라']
+for i in list[1:]:
+    print(i)
+print("-----------")
+
+#150
+list = ['가', '나', '다', '라']
+for i in list[::-1]:
+    print(i)
+print("-----------")
+
+#151
+list = [3,-20,-3,44]
+for i in list:
+    if i<0:
+        print(i)
+print("-----------")
+
+#152
+list = [3, 100, 23, 44]
+for i in list:
+    if i%3==0:
+        print(i)
+print("-----------")
+
+#153
+list = [13, 21, 12, 14, 30, 18]
+for i in list:
+    if i%3==0 and i<20:
+        print(i)
+print("-----------")
+
+#154
+list = ['i', 'study', 'python', 'language', "!"]
+for i in list:
+    if len(i)>=3:
+        print(i)
+print("-----------")
+
+#155
+list = ["A", 'b', 'c','D']
+for i in list:
+    if i.isupper() == True:
+        print(i)
+print("-----------")
+
+#156
+list = ["A", 'b', 'c','D']
+for i in list:
+    if i.islower() == True:
+        print(i)
+print("-----------")
+
+#157
+list = ['dog','cat', 'parrot']
+for i in list:
+    print(i[0].upper() + i[1:])
+print("-----------")
+
+#158
+list = ["hello.py", 'ex01.py', "intro.hwp"]
+for i in list:
+    print(i.split(".")[0])
+print("-----------")
+
+#159
+list = ["intra.h", "intra.c", "define.h", "run.py"]
+for i in list:
+    if i.split(".")[1]=="h":
+        print(i)
+print("-----------")
+
+#160
+list= ["intra.h", "intra.c", "define.h", "run.py"]
+for i in list:
+    if i.split(".")[1]in ["h", "c"]  :
+        print(i)
+print("-----------")
+
+#161
+for i in range(100):
+    print(i)
+print("-----------")
+
+#162
+for i in range(2002,2051,4):
+    print(i)
+print("-----------")
+
+#163
+for i in range(1,30,3):
+    print(i)
+print("-----------")
+
+#164
+for i in range(99,-1,-1):
+    print(i)
+print("-----------")
+
+#165
+for i in range(10):
+    print(i/10)
+print("-----------")
+
+#166
+for i in range(1,10):
+    print("3 x",i,'=',i*3)
+print("-----------")
+#167
+for i in range(1,10,2):
+    print("3 x",i,'=',i*3)
+print("-----------")
+
+#168
+sum=0
+for i in range(1,11):
+    sum+=i
+print(sum)
+print("-----------")
+
+#169
+sum=0
+for i in range(1,11,2):
+    sum+=i
+print(sum)
+print("-----------")
+
+#170
+sum=1
+for i in range(1,11):
+    sum*=i
+print(sum)
+print("-----------")
+
+#171
+price_list = [32100, 32150, 32000, 32500]
+for i in range(4):
+    print(price_list[i])
+print("-----------")
+
+#172
+price_list = [32100, 32150, 32000, 32500]
+for i in range(4):
+    print(i, price_list[i])
+print("-----------")
+
+#173
+price_list = [32100, 32150, 32000, 32500]
+for i in range(4):
+    print(3-i, price_list[i])
+print("-----------")
+
+#174
+price_list = [32100, 32150, 32000, 32500]
+for i in range(3):
+    print(100+10*i, price_list[i])
+print("-----------")
+
+#175
+my_list = ["가", "나", "다", "라"]
+for i in range(3):
+    print(my_list[i],my_list[i+1])
+print("-----------")
+
+#176
+my_list = ["가", "나", "다", "라","마"]
+for i in range(3):
+    print(my_list[i],my_list[i+1],my_list[i+2])
+print("-----------")
+
+#177
+my_list = ["가", "나", "다", "라"]
+for i in range(3,0,-1):
+    print(my_list[i],my_list[i-1])
+print("-----------")
+
+#178
+list = [100,200,400,800]
+for i in range(3):
+    print(list[i+1]-list[i])
+print("-----------")
+
+#179
+list = [100,200,400,800,1000,1300]
+for i in range(4):
+    print((list[i]+list[i+1]+list[i+2])/3)
+print("-----------")
+
+#180
+low_price = [100, 200, 400, 800, 1000]
+high_price = [150,300,430,880,1000]
+volatility = []
+for i in range(5):
+    volatility.append(high_price[i]-low_price[i])
+print(volatility)
+print("-----------")
+
+#181
+apart = [["101호","102호"],["201호","202호"],["301호","302호"]]
+#182
+stock = [["시가",100,200,300],["종가",80,210,330]]
+#183
+stok = {"시가":[100,200,300],"종가":[80,210,330]}
+#184
+stock = {"10/10":[80, 110, 70, 90],"10/11":[210, 230, 190, 200]}
+#185
+apart = [[101,102],[201,202],[301,302]]
+for i in apart:
+    for j in i:
+        print(j,end = ' 호 ')
+    print()
+print("-----------")
+
+#186
+apart = [[101,102],[201,202],[301,302]]
+for i in apart[2::-1]:
+    for j in i:
+        print(j,end = ' 호\n')
+print("-----------")
+
+#187
+apart = [[101,102],[201,202],[301,302]]
+for i in apart[2::-1]:
+    for j in i[::-1]:
+        print(j,end = ' 호\n')
+print("-----------")
+
+#188
+apart = [[101,102],[201,202],[301,302]]
+for i in apart:
+    for j in i:
+        print(j,end = ' 호\n')
+        print("-------")
+
+
+#189
+apart = [[101,102],[201,202],[301,302]]
+for i in apart:
+    for j in i:
+        print(j,end = ' 호\n')
+    print("-------")
+
+
+#190
+apart = [[101,102],[201,202],[301,302]]
+for i in apart:
+    for j in i:
+        print(j,end = ' 호\n')
+print("-------")
+
+#191
+data = [[2000,3050,2050,1980],[7500,2050,2050,1980],[15450,15050,15550,14900]]
+for i in data:
+    for j in i:
+        print(j*1.00014)
+
+#192
+data = [[2000,3050,2050,1980],[7500,2050,2050,1980],[15450,15050,15550,14900]]
+for i in data:
+    for j in i:
+        print(j*1.00014)
+    print("----")
+
+#193
+result = []
+data = [[2000,3050,2050,1980],[7500,2050,2050,1980],[15450,15050,15550,14900]]
+for i in data:
+    for j in i:
+        result.append(j*1.00014)
+print(result)
+print("------------------------------------------------")
+
+#194
+result = []
+res1 = []
+data = [[2000,3050,2050,1980],[7500,2050,2050,1980],[15450,15050,15550,14900]]
+for i in data:
+    for j in i:
+        res1.append(j*1.00014)
+    result.append(res1)
+    res1 = []
+print(result)
+print("------------------------------------------------")
+
+#195
+ohlc = [['open','high','low','close'],[100,110,70,100],[200,210,180,190],[300,310,300,310]]
+for i in ohlc[1:]:
+    print(i[3])
+print("------------------------------------------------")
+
+#196
+ohlc = [['open','high','low','close'],[100,110,70,100],[200,210,180,190],[300,310,300,310]]
+for i in ohlc[1:]:
+    if i[3]>150:
+        print(i[3])
+print("------------------------------------------------")
+
+#197
+ohlc = [['open','high','low','close'],[100,110,70,100],[200,210,180,190],[300,310,300,310]]
+for i in ohlc[1:]:
+    if i[3]>=i[0]:
+        print(i[3])
+print("------------------------------------------------")
+
+#198
+ohlc = [['open','high','low','close'],[100,110,70,100],[200,210,180,190],[300,310,300,310]]
+volatility = []
+for i in ohlc[1:]:
+    volatility.append(i[1]-i[2])
+print(volatility)
+print("------------------------------------------------")
+
+#199
+ohlc = [['open','high','low','close'],[100,110,70,100],[200,210,180,190],[300,310,300,310]]
+volatility = []
+for i in ohlc[1:]:
+    if i[3]>i[0]:
+        volatility.append(i[1]-i[2])
+print(volatility)
+print("------------------------------------------------")
+
+#200
+ohlc = [['open','high','low','close'],[100,110,70,100],[200,210,180,190],[300,310,300,310]]
+money = []
+for i in ohlc[1:]:
+    money.append(i[3] - i[0])
+print(money)
+print("------------------------------------------------")
+
+
+
+
     

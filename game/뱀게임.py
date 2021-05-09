@@ -32,7 +32,7 @@ def food_move(pos):
 #3-3. 음식 그리기
 def draw(message):
     global screen
-    screen.fill((0, 0, 0))
+    screen.blit(background, (0, 0))
     for f in food:
         pygame.draw.ellipse(screen, (0, 255, 0), Rect( (f[0])*30, (f[1])*30, 30, 30 ) )
     for body in snake:
