@@ -31,7 +31,9 @@ from os import getcwd
 print(getcwd())
 
 #249
-os.rename("C:\Users\User\Desktop\h.txt","a.txt")
+#os.rename("C:\Users\User\Desktop\h.txt","a.txt")
+
 #250
 import numpy
 print(numpy.arange(0,5,0.1))
+
