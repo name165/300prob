@@ -10,3 +10,26 @@ arr = [1,4,2,3]
 ret = solution(arr)
 
 print(ret)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
