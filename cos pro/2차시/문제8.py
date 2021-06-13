@@ -1,6 +1,6 @@
 def solution(number):
     count = 0
-    while number > 0 :
+    while number > 0 : # >= -> >
         n = number % 10
         if n in [2,3,5,7]:
             count += 1
