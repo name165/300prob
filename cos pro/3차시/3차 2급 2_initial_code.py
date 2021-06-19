@@ -27,7 +27,7 @@ def func_c(current_grade, last_grade):
 
 def solution(current_grade, last_grade):
     rank = func_b(current_grade) # 순위 저장
-    max_diff_grade = func_c(current_grade, last_grade) # 증가한 점수
+    max_diff_grade = func_c(current_grade, last_grade) # 증가한 점수 최댓값
     answer = func_a(current_grade, last_grade, rank, max_diff_grade) #count 반환
     return answer
 
